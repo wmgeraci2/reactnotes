@@ -1,16 +1,38 @@
 import React, { Component } from  'react';
-import logo from './logo.svg';
 import Note from './Note/Note';
 import './App.css';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+
+        // We are setting ou the React state of the component
+        this.state = {  
+            notes: [
+                { id: 1, noteContent: 'Note 1 here!' },
+                { id: 2, noteContent: 'Note 2 here!' },
+            ],
+        }
+    }
+
     render() {
         return (
-            <div>
-                <h1>React & Firebase To-Do List</h1>
-                <Note />
+        <div className="notesWrapper">
+            <div className="notesHeader">
+                <div className="Heading">React & Firebase To-do List</div>
             </div>
-        );
+            <div className="notesBody">
+                {
+                    this.state.notes.map((note) => {
+                        return (
+                            <Note noteContent={note.noteContent} noteId={note.id} key={note.id} />
+                        )
+                    })
+                }
+            </div>
+            <div className="notesFooter">Footer text-info goes here...</div>
+        </div>
+      )
     }
 }
 
