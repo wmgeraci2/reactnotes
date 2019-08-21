@@ -2,6 +2,7 @@ import React, { Component } from  'react';
 import Note from './Note/Note';
 import './App.css';
 
+// Testing out GIT Push from PC
 class App extends Component {
     constructor(props){
         super(props);
