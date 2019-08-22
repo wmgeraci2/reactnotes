@@ -4,7 +4,7 @@ import Noteform from './Noteform/Noteform'
 import './App.css';
 
 
-// Testing out GIT Push from PC
+
 class App extends Component {
     constructor(props){
         super(props);
@@ -21,7 +21,7 @@ class App extends Component {
 
     addNote(note) {
         //Push the note on to the notes array!!
-        const previousNotes = this.state.notes;
+        const previousNotes =  this.state.notes;
         previousNotes.push({ id: previousNotes.length + 1, noteContent: note });
 
         this.setState({
