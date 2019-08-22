@@ -1,6 +1,7 @@
 import React, { Component } from  'react';
 import Note from './Note/Note';
 import './App.css';
+import Noteform from './Noteform/Noteform';
 
 // Testing out GIT Push from PC
 class App extends Component {
@@ -31,7 +32,9 @@ class App extends Component {
                     })
                 }
             </div>
-            <div className="notesFooter">Footer text-info goes here...</div>
+            <div className="notesFooter">
+                <Notesform />
+            </div>
         </div>
       )
     }
