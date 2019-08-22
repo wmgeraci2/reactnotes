@@ -1,12 +1,14 @@
 import React, { Component } from  'react';
 import Note from './Note/Note';
+import Noteform from './Noteform/Noteform'
 import './App.css';
-import Noteform from './Noteform/Noteform';
+
 
 // Testing out GIT Push from PC
 class App extends Component {
     constructor(props){
         super(props);
+        this.addNote.bind(this);
 
         // We are setting ou the React state of the component
         this.state = {  
@@ -15,6 +17,16 @@ class App extends Component {
                 { id: 2, noteContent: 'Note 2 here!' },
             ],
         }
+    }
+
+    addNote(note) {
+        //Push the note on to the notes array!!
+        const previousNotes = this.state.notes;
+        previousNotes.push({ id: previousNotes.length + 1, noteContent: note });
+
+        this.setState({
+            notes: previousNotes
+        });
     }
 
     render() {
@@ -33,7 +45,7 @@ class App extends Component {
                 }
             </div>
             <div className="notesFooter">
-                <Notesform />
+                <Noteform addNote={this.addNote} />
             </div>
         </div>
       )
