@@ -1,10 +1,9 @@
-
-  // Your web app's Firebase configuration
- export const DB_CONFIG = {
-  apiKey: "AIzaSyDerOakL8vbXd-11Ml9ACnW8yB61gh-THM",
-  authDomain: "notes-demo-2621d.firebaseapp.com",
-  databaseURL: "https://notes-demo-2621d.firebaseio.com",
-  projectId: "notes-demo-2621d",
-  storageBucket: "notes-demo-2621d.appspot.com",
-  messagingSenderId: "620822791693",
-  appId: "1:620822791693:web:12330f70faaea1f3"  };
+const firebaseConfig = {
+  apiKey: "AIzaSyBomHA4h4XTIyRConfD5E3MxDYKnvVXKfU",
+  authDomain: "test-firebase-d6ea4.firebaseapp.com",
+  databaseURL: "https://test-firebase-d6ea4.firebaseio.com",
+  projectId: "test-firebase-d6ea4",
+  storageBucket: "",
+  messagingSenderId: "553630638469",
+  appId: "1:553630638469:web:d25b8efd30b42004"
+};
