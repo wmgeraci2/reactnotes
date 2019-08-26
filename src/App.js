@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FirebaseConfig }  from './Config/Config';
+import { DB_CONFIG }  from './Config/Config';
 import firebase from 'firebase/app';
 import 'firebase/database';
 

@@ -1,4 +1,4 @@
-const firebaseConfig = {
+const { DB_CONFIG } = {
   apiKey: "AIzaSyBomHA4h4XTIyRConfD5E3MxDYKnvVXKfU",
   authDomain: "test-firebase-d6ea4.firebaseapp.com",
   databaseURL: "https://test-firebase-d6ea4.firebaseio.com",
