@@ -1,48 +1,47 @@
 import React, { Component } from 'react';
 import './Noteform.css';
 
-class Noteform extends Component {
-    constructor(props) {
+
+class Noteform extends Component{
+    constructor(props){
         super(props);
-        this.state={
+        this.state = {
             newNoteContent: '',
         };
+
         this.handleUserInput = this.handleUserInput.bind(this);
         this.writeNote = this.writeNote.bind(this);
     }
 
-    // called on change event from user input - set the newNoteContent
-    // to the value of what the user typed in the input box :-)
+    // When the user input changes, set the newNoteContent
+    // to the value of what's in the input box.
     handleUserInput(e){
-        console.log(this);
         this.setState({
-            newNoteContent: e.target.value, //the value of the text input
+            newNoteContent: e.target.value, // the value of the text input
         })
     }
 
     writeNote(){
-       //call a method which sets a noteNoteContent 
-       // to the value of the input
-       this.props.addNote(this.state.newNoteContent)
+        // call a method that sets the noteContent for a note to
+        // the value of the input
+        this.props.addNote(this.state.newNoteContent);
 
-       //Once using the note string set back to empty by initializating
-       //newNoteContent to single quotes...
-       this.setState({
-           newNoteContent: '',
-       }) 
+        // Set newNoteContent back to an empty string.
+        this.setState({
+            newNoteContent: '',
+        })
     }
-    
+
     render(){
         return(
             <div className="formWrapper">
-                <input className="NoteInput"
+                <input className="noteInput"
                 placeholder="Write a new note..."
-                value={this.state.newNoteContent}
-                onChange={this.handleUserInput}/>
+                value={this.state.newNoteContent} 
+                onChange={this.handleUserInput} />
                 <button className="noteButton"
                 onClick={this.writeNote}>Add Note</button>
             </div>
-
         )
     }
 }
